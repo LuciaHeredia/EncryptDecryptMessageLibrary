@@ -35,11 +35,6 @@ public class MainActivity extends AppCompatActivity {
     // add your FirebaseDatabase RealTime URL
     private static final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://encryptmessageapp-default-rtdb.europe-west1.firebasedatabase.app/");
 
-    private TextView message_show; // OTHER APP
-    private EditText dec_secret_key_text; // OTHER APP
-    private Button dec_btn; // OTHER APP
-    private TextView message_decrypted; // OTHER APP
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
         secret_key_text = findViewById(R.id.secret_key_text);
         encrypt_btn = findViewById(R.id.enc_main_btn);
 
-        message_show = findViewById(R.id.message_show); // OTHER APP
-        dec_secret_key_text = findViewById(R.id.dec_secret_key_text); // OTHER APP
-        dec_btn = findViewById(R.id.dec_main_btn); // OTHER APP
-        message_decrypted = findViewById(R.id.dec_message_show); // OTHER APP
     }
 
     private void listeners() {
@@ -75,42 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     String encryptedMessage = EncryptUtils.SendEncryptedMessage(msg_input, secret_key_input);
                     saveData(encryptedMessage, databaseReference);
-                } catch (NoSuchPaddingException | InvalidKeyException |
-                        NoSuchAlgorithmException | IllegalBlockSizeException |
-                        BadPaddingException | InvalidAlgorithmParameterException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-
-        // OTHER APP - THE RECEIVER
-
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                message_show.setText(dataSnapshot.child("message").getValue(String.class));
-                Log.d("FIREBASE","Data Loaded");
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                System.out.println("The read failed: " + databaseError.getCode());
-            }
-        });
-
-        dec_btn.setOnClickListener(v -> {
-            String message_received;
-            String secretKey = dec_secret_key_text.getText().toString();
-
-            if(secretKey.isEmpty()) {
-                dec_secret_key_text.setError("Must be filled.");
-            }
-            else {
-                try {
-                    message_received = EncryptUtils.showDecryptedMessage((String) message_show.getText(), secretKey);
-                    message_decrypted.setText(message_received);
-
                 } catch (NoSuchPaddingException | InvalidKeyException |
                         NoSuchAlgorithmException | IllegalBlockSizeException |
                         BadPaddingException | InvalidAlgorithmParameterException e) {

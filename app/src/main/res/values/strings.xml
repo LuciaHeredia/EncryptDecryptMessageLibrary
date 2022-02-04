@@ -2,7 +2,7 @@
     <string name="app_name">EncryptMessage</string>
     <string name="send_encrypted_message">Send Encrypted Message</string>
     <string name="insert_your_message_here">Insert your Message here</string>
-    <string name="massage_encryption">Massage Encryption</string>
+    <string name="message_encryption">Message Encryption</string>
     <string name="lucia_heredia_avner_levy">® Lucia Heredia, Avner Levy</string>
     <string name="new_message">New Message</string>
     <string name="insert_secret_key_here">Insert secret key here</string>
