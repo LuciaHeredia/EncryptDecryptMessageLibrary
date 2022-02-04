@@ -6,7 +6,7 @@
 
 
 ## Example of two Apps:
-<img src = "ExampleApps/EncryptApp.png"> <img src = "ExampleApps/DecryptApp.png">
+ <img src = "ExampleApps/DecryptApp.png">
 
 
 ## App created with:
