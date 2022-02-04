@@ -67,7 +67,6 @@
         android:textColor="@color/codere_grey" />
 
 
-
     <TextView
         android:id="@+id/credentials"
         android:layout_width="match_parent"
