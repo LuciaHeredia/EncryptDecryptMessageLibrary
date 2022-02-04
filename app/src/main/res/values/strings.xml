@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DecryptMessage</string>
+    <string name="message_decryption">Message Decryption</string>
+    <string name="lucia_heredia_avner_levy">® Lucia Heredia, Avner Levy</string>
+    <string name="decrypt_message">Decrypt message</string>
+    <string name="new_message">new message..</string>
+    <string name="insert_secret_key_here">Insert secret key here</string>
+    <string name="decrypted_message">decrypted message..</string>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/codere_grey"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/crypto_image"
+        android:layout_width="match_parent"
+        android:layout_height="40pt"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/crypto"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crypto_image"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/message_decryption"
+        android:textColor="@color/crypto_light_blue"
+        android:textSize="37sp" />
+
+    <TextView
+        android:id="@+id/message_show"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@id/title"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:hint="@string/new_message"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        android:textSize="8pt" />
+
+    <EditText
+        android:id="@+id/dec_secret_key_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:autofillHints="username"
+        android:hint="@string/insert_secret_key_here"
+        android:inputType="textLongMessage"
+        android:minHeight="48dp"
+        android:textColor="@color/codere_green"
+        android:textColorHint="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/dec_main_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dec_secret_key_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/crypto_light_blue_btn"
+        android:text="@string/decrypt_message"
+        android:textColor="@color/codere_grey" />
+
+    <TextView
+        android:id="@+id/dec_message_show"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_above="@+id/credentials"
+        android:layout_below="@id/dec_main_btn"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="90dp"
+        android:gravity="center"
+        android:hint="@string/decrypted_message"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/credentials"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/lucia_heredia_avner_levy"
+        android:textColor="@color/white"
+        android:textSize="7pt" />
+
+</RelativeLayout>

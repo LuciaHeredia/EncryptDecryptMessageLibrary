@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "396543988738",
+    "firebase_url": "https://encryptmessageapp-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "encryptmessageapp",
+    "storage_bucket": "encryptmessageapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396543988738:android:479162fdd11a0a2939c31b",
+        "android_client_info": {
+          "package_name": "com.example.encryptdecryptmessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396543988738-m6r930ako0371ben4ld1lvf69l5f0hs4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_rbY3uiQpFvsDWLWIotpKG4mWwV3mE5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396543988738-m6r930ako0371ben4ld1lvf69l5f0hs4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396543988738:android:dd42ae9c6d21f18739c31b",
+        "android_client_info": {
+          "package_name": "com.example.encryptmessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396543988738-m6r930ako0371ben4ld1lvf69l5f0hs4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_rbY3uiQpFvsDWLWIotpKG4mWwV3mE5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396543988738-m6r930ako0371ben4ld1lvf69l5f0hs4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396543988738:android:8cd14a9082218aaa39c31b",
+        "android_client_info": {
+          "package_name": "com.example.showdecryptedmessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396543988738-m6r930ako0371ben4ld1lvf69l5f0hs4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_rbY3uiQpFvsDWLWIotpKG4mWwV3mE5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396543988738-m6r930ako0371ben4ld1lvf69l5f0hs4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
