@@ -2,8 +2,6 @@ package com.example.encdecmsglib;
 
 import android.util.Log;
 
-import com.google.firebase.database.DatabaseReference;
-
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -22,12 +20,10 @@ public class EncryptUtils {
     private static final String ALGORITHM = "AES";
     private static SecretKeySpec secretKey;
 
-    public static void SendEncryptedMessage(String msg_input, String secretKey, DatabaseReference databaseReference) throws NoSuchPaddingException, InvalidKeyException, NoSuchAlgorithmException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException {
-
+    public static String SendEncryptedMessage(String msg_input, String secretKey) throws NoSuchPaddingException, InvalidKeyException, NoSuchAlgorithmException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException {
         String encryptedMessage = encryptMessage(msg_input, secretKey);
         Log.d("ENC",encryptedMessage);
-
-        saveData(encryptedMessage, databaseReference);
+        return encryptedMessage;
     }
 
     public static void prepareSecreteKey(String myKey) {
@@ -65,11 +61,6 @@ public class EncryptUtils {
             System.out.println("Error while decrypting: " + e.toString());
         }
         return null;
-    }
-
-    public static void saveData(String encryptedMessage, DatabaseReference databaseReference){
-        databaseReference.child("message").setValue(encryptedMessage).addOnCompleteListener(
-                        task -> Log.d("FIREBASE","Data saved"));
     }
 
     public static String showDecryptedMessage(String messageEncrypted, String secretKey) throws NoSuchPaddingException, InvalidKeyException, NoSuchAlgorithmException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException {

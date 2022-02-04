@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
             }
             else{
                 try {
-                    EncryptUtils.SendEncryptedMessage(msg_input, secret_key_input, databaseReference);
+                    String encryptedMessage = EncryptUtils.SendEncryptedMessage(msg_input, secret_key_input);
+                    saveData(encryptedMessage, databaseReference);
                 } catch (NoSuchPaddingException | InvalidKeyException |
                         NoSuchAlgorithmException | IllegalBlockSizeException |
                         BadPaddingException | InvalidAlgorithmParameterException e) {
@@ -118,6 +119,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public static void saveData(String encryptedMessage, DatabaseReference databaseReference){
+        databaseReference.child("message").setValue(encryptedMessage).addOnCompleteListener(
+                task -> Log.d("FIREBASE","Data saved"));
     }
 
 }
